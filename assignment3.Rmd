@@ -1,0 +1,135 @@
+---
+title: "Assignment 3"
+author: "put your name"
+output: 
+  pdf_document:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("assignment3.R")
+```
+**Section #: `r paste("0",section,sep="")`**
+
+
+Students must abide by  [UVic
+  academic regulations](https://www.uvic.ca/calendar/undergrad/index.php#/policy/Sk_0xsM_V?bc=true&bcCurrent=08%20-%20Policy%20on%20Academic%20Integrity&bcGroup=Undergraduate%20Academic%20Regulations&bcItemType=policies)
+ and observe standards of scholarly integrity
+(i.e. no plagiarism or cheating). Therefore, this assignment must be
+taken individually and not with a friend, classmate, or group. You are
+also prohibited from sharing any information about the assignment with
+others. I affirm that I will not give or receive any aid on this assignment 
+and that all work will be my own. **name here**
+
+A big part of environmental economics is estimating peoples willingness to pay for an improvement in environmental quality and/or their willingness to accept for a degradation in environmental quality.  Theoretically these two measures should be very close for small changes for the good in question.  Nevertheless there are countless studies that show that these two measures can be significantly different even for inconsequential i.e. small value goods... like coffee mugs.  One possibility explanation for this divergence is that humans *suffer* from what is known an endowment effect.  I emphasised suffer because this is an irrational behaviour.  The endowment effect, in a nutshell, is that you demand more to give up something than what you are willing to pay for it in the first place.  It is as if possessing a good makes it more valuable to you. In the context of environmental economics, people demand more compensation for a slight decrease in environmental quality than what they are willing to pay for a slight improvement.  It is as if possessing the current level of environmental quality makes it more valuable that what your were willing to pay to get that level of environmental quality in the first place. It is an open question whether or not the endowment effect is an actual feature of human behaviour or is an artifact of subject confusion regarding the mechanisms we use to measure their willingness to pay and willingness to accept. 
+
+Recall that in experiment 3 there were 3 separate parts:
+
+* A second price sealed bid auction where you bid on a mug.
+* A random mug give-away: One person in each group was given a mug.
+* Finally, you stated the minimum that you would be willing to sell a mug back to me (if you were given a mug in part 2).  
+
+This experiment is designed to manipulate both explanations of the endowment effect.  
+
+* Hints are provided (treatment `strategy`) to some subjects to see if confusion regarding optimal bidding and asking is causing the endowment effect. 
+
+* The probability of being endowed with the mug is altered (treatment `size`). It seems reasonable that the greater the probability of winning the mug, the greater the attachment the subject would have to the mug, leading to a greater endowment effect.
+
+* This semester I added one more manipulation:  The example numbers that were used to explain the second price auction and the mug buy-back were randomly generated: each student saw different numbers. If people are perfectly rational the example numbers should have no influence on behavior. Otherwise they might serve as an anchor which does. In the dataframe `mydf` these random variables are coded `highest`, `second`, `third` and `fourth`.  
+
+# (10 marks)
+
+**In words, why is it in your best interest to bid your true value in a second price sealed bid auction?**
+
+
+
+# (10 marks)
+
+**In words, why is it in your best interest to ask your forgone value when selling at an unknown reserve price?**
+
+
+
+# (0 marks)
+
+**Create boxplots for the bids in the second price auction, partitioning the data by the variables `strategy` and `size`.** 
+
+```{r first_chunk}
+first_plot
+```
+
+
+# (5 marks)
+
+**What do the boxplots show us about the bidding behavior across treatments?**
+
+
+
+# (10 marks)
+
+**Each student was presented with a different random set of numbers that were used in an example of the outcome of a second price auction. The example winning bid is variable `highest` in the dataframe `mydf`. Use functions `ggplot()`, `geom_jitter()` and `geom_smooth()` to create a scatterplot with best fit line. Set aesthetics `aes(highest,bid)` in the call to `ggplot()`. Set  `method="lm"` in `geom_smooth`.  Use function `labs()` to give your plot an informative title and axes labels.  If your bidding behaviour is rational, should variable `highest` influence your bid?** 
+
+
+
+```{r second_chunk,message=FALSE}
+#second_plot
+```
+
+# (10 marks)
+
+**Create barcharts using `geom_bar` for the beliefs about winning the mug `prob`, faceting the data using function `facet_grid` using variables `strategy` and `size`. Use xlab() to give the x axis a better label.**
+
+```{r third_chunk}
+#third_plot
+```
+
+
+# (5 marks)
+
+**In general, what do barcharts tell us? Specifically in this case, what do the barcharts tell us about beliefs of winning the mug with regards to the treatments? Do all of your classmates understand probability?**
+
+
+
+# (10 marks)
+
+**Code and humour are better when dry. Regarding code, dry is an acronym for Don't Repeat Yourself.  Below I am going to ask you to produce boxplots very similar to the boxplots above.  Any time you are tempted to cut and paste code, you should think to yourself: I really should write a function to do this. With cutting and pasting if you subsequently want to make changes to your code, you will need to make that modification as many times as you pasted (plus the original). With a function you only need to make the change in one place. The function you write will take as arguments the things that change between the 4 plots: i.e. in this case what is on the y-axis and its label. Modify the code that I provided to create the `first_plot`  to create a function `my_boxplots` (in your assignment3.R file) with arguments (dataf, thing, ylabel). Hint: specify the aesthetics: `aes(x=size, y=dataf[[thing]], fill=strategy))`.  While you are at it, add `caption="These boxplots were produced using function my_boxplots"` in the list of `labs`.  Include a copy of `my_boxplots` in the code chunk below. Note the chunk option eval=FALSE, which means that this code is not run, just displayed (echoed).**  
+
+```{r note_this_code_is_not_evaluated,just_for_show--->, eval=FALSE, echo=TRUE}
+#
+```
+
+
+# (5 marks)
+
+**Use function `my_boxplots()` to create boxplots for the asks, partitioning the data by the variables `strategy` and `size`.**
+
+```{r fourth_chunk}
+#fourth_plot
+```
+
+# (10 marks)
+
+**What do you see above?**
+
+
+
+# (10 marks)
+
+**What mistake did I make in the experiment design, which should be apparent by looking at the boxplots above?  Hint: what hampers our ability to draw conclusions about behaviour in the small groups?  If the stakes were real, why do you think I might not want to allocate an even number of students to small groups vs. large groups? How might I get around this issue in the future?**
+
+
+
+# (5 marks)
+
+**Use function `my_boxplots()` to create boxplots for the endowment effect (ask-bid), partitioning the data by the variables `strategy` and `size`.**
+
+```{r fifth_chunk}
+#fifth_plot
+```
+
+
+# (10 marks)
+
+**What do you see above?**
+
+
