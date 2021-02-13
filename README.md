@@ -2,7 +2,7 @@
 
 Instructions on the installation of R, Rstudio, etc can be found here:
 
-https://bright.uvic.ca/d2l/le/content/75904/viewContent/694287/View
+https://github.com/rpmartin/Rinstall
 
 Once you have everything installed, here is how you get started on assignment 3.
 
