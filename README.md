@@ -35,7 +35,7 @@ There should be no errors (yet ;) when you run the code of assignment3.R. If the
 Get in touch either by email or on the message board. 
 Only once you have checked that there are no errors in your assignment3.R file should you open up assignment3.Rmd file.
 
-In the assignment3.Rmd file set author to your first initial and last name, and “sign” your academic integrity statement (replace name here with your first initial and last name).
+In the assignment3.Rmd file set author to your first name initial and last name (e.g. Y. Name), and “sign” your academic integrity statement (replace `name here` with first name initial and last name).
 
 Knit your assignment3.Rmd file by hitting the knit button (there is a ball of yarn with a needle sticking out of it beside the word knit). 
 This is called knitting because we are “weaving” together R code (that produces graphs and tables) and prose.
