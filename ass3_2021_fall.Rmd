@@ -35,9 +35,9 @@ Recall that in experiment 3 there were 3 separate parts:
 
 The treatments were designed to manipulate both alternative explanations of the endowment effect.  
 
-* Hints are provided to some subjects to see if confusion regarding optimal bidding and asking is causing the endowment effect. 
+* Half of the subjects were provided hints regarding the optimal bidding and asking behaviour: i.e. "Hint: in a second price auction bidding your value maximizes your expected payoff." and "Hint: In a second price procurement auction, asking your forgone value maximizes your expected payoff."  If subjects are confused about how to optimally bid and ask, then hints should reduce this confusion.  
 
-* The flatness of the expected payoff function is altered via group size. In a nutshell, in a 10 person auction it doesn't really matter what you bid (as long as it is not too high), your expected profit will be approximately zero.  
+* Half of the subjects were in two person groups and the other half of the class was in 10 person groups.  In a two person group if you have "normal" preferences then you have some incentive to bid and ask your value, whereas in a 10 person group your expected payoff function is basically flat (at zero): the only mistake you can make is to bid too much or ask too little. 
 
 Note that this is a *very* demanding test of the endowment effect: The probability of you becoming endowed (winning the auction) is low and unknown, so very little opportunity to become attached to the chocolate bar.
 
