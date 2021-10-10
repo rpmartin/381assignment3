@@ -1,0 +1,164 @@
+---
+title: "Assignment 3"
+author: "Y. Name better than Your Name, do not put ID"
+output: 
+  html_document:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("ass3_2021_fall.R")
+```
+**Section #: `r paste("0",section,sep="")`**
+
+
+Students must abide by  [UVic
+  academic regulations](https://www.uvic.ca/calendar/undergrad/index.php#/policy/Sk_0xsM_V?bc=true&bcCurrent=08%20-%20Policy%20on%20Academic%20Integrity&bcGroup=Undergraduate%20Academic%20Regulations&bcItemType=policies)
+ and observe standards of scholarly integrity
+(i.e. no plagiarism or cheating). Therefore, this assignment must be
+taken individually and not with a friend, classmate, or group. You are
+also prohibited from sharing any information about the assignment with
+others. I affirm that I will not give or receive any aid on this assignment 
+and that all work will be my own. **name here**
+
+A big part of environmental economics is estimating peoples willingness to pay for an improvement in environmental quality and/or their willingness to accept for a degradation in environmental quality.  Theoretically these two measures should be very close for small changes for the good in question.  Nevertheless there are countless studies that show that these two measures can be significantly different even for inconsequential i.e. small value goods... like chocolate bars.  One possibility explanation for this divergence is that humans *suffer* from what is known an endowment effect.  I emphasized suffer because this is an irrational behaviour.  The endowment effect, in a nutshell, is that you demand more to give up something than what you are willing to pay for it in the first place. It is as if possessing a good makes it more valuable to you. In the context of environmental economics, people demand more compensation for a slight decrease in environmental quality than what they are willing to pay for a slight improvement.  It is as if possessing the current level of environmental quality makes it more valuable that what your were willing to pay to get that level of environmental quality in the first place. It is an open question whether or not the endowment effect is an actual feature of human behaviour or is:
+
+* an artifact of subject confusion regarding the mechanisms we use to measure their willingness to pay and willingness to accept. 
+* an artifact of random choice in an environment where little is at stake: this is known as the flat optimum problem. 
+
+Recall that in experiment 3 there were 3 separate parts:
+
+1)  A second price sealed bid auction where you bid on a chocolate bar.
+2)  You were asked with what probability you think you won the auction in part 1.
+3)  Finally, you stated the minimum that you would be willing to sell a chocolate bar back to me (if you in fact won the auction in part 1).  
+
+The treatments were designed to manipulate both alternative explanations of the endowment effect.  
+
+* Hints are provided to some subjects to see if confusion regarding optimal bidding and asking is causing the endowment effect. 
+
+* The flatness of the expected payoff function is altered via group size. In a nutshell, in a 10 person auction it doesn't really matter what you bid (as long as it is not too high), your expected profit will be approximately zero.  
+
+Note that this is a *very* demanding test of the endowment effect: The probability of you becoming endowed (winning the auction) is low and unknown, so very little opportunity to become attached to the chocolate bar.
+
+# (10 marks)
+
+**In words, why is it in your best interest to bid your true value in a second price sealed bid auction, regardless of the number of bidders?**
+
+
+# (5 marks)
+
+**In words, why is it in your best interest to ask your forgone value in a second price procurement auction, regardless of the number of askers?**
+
+
+# (5 marks)
+
+**In your .R file use the assignment operator `<-` and the pipe operator `%>%` overwrite `mydf` using `mydf` as the input to the following functions: i.e. start with `mydf <- mydf %>%`, THEN do the following: `group_by()` variable `oneid`, THEN create new variables using the `mutate()` function: `mean_bid=mean(bid)`, `mean_ask=mean(ask)`,  `sd_bid=sd(bid)`, `sd_ask=sd(ask)`, `ask_minus_bid=ask-bid`,  `mean_ask_minus_bid=mean(ask_minus_bid)`. Put a copy of your code into the chunk below, noting `eval=FALSE`, which means that the code is not evaluated (run).**
+
+```{r, eval=FALSE, echo=TRUE}
+
+```
+
+
+
+# (5 marks)
+
+**In your .R file use functions `ggplot()`  with argument `data=mydf` and `aes()`  with arguments `x=bid`, `y=ask` and `col=treatment` to create first_plot.  To this blank plot add (using the `+` operator) `geom_abline()` with arguments `slope=1,intercept=0,col="white",lwd=2` and `geom_jitter()` with arguments `alpha=.5,width=1,height=1`.  Give the plot a descriptive title using function `labs()` with argument `title="a short description of what I think the plot shows"`.**
+
+```{r first_chunk}
+#first_plot
+```
+
+# (5 marks)
+
+**What is the significance of the white diagonal line? What pattern can you see in the data?**
+
+# (5 marks)
+
+**In your .R file use functions `ggplot()` with argument `data=mydf` and `aes()` with arguments `x=mean_bid`, `y=mean_ask`,`col=treatment`,`label=oneid` to create second_plot. To this blank plot add (using the `+` operator) `geom_abline()` with arguments `slope=1,intercept=0,col="white",lwd=2` and `geom_text()` with no arguments.**
+
+```{r second_chunk}
+#second_plot
+```
+
+# (5 marks)
+
+**What pattern can you see in the data?**
+
+# (5 marks)
+
+**In your .R file create a dataframe called `second_hull` which uses dataframe `mydf` as an input, THEN `group_by()` `treatment` THEN `slice(chull(mean_bid,mean_ask))`. Copy your code into the chunk below, noting `eval=FALSE`, which means that the code is not evaluated (run).**
+
+```{r, eval=FALSE, echo=TRUE}
+
+```
+
+# (5 marks)
+
+**In your .R file create `third_plot`, by adding to `second_plot` using the assignment `<-` and addition `+` operators: ie. `third_plot<-second_plot+`. To the plot add a `geom_polygon()` with arguments `data=second_hull`, `fill=treatment`, `col=treatment`, `alpha=.3`.**
+
+```{r third_chunk}
+#third_plot
+```
+
+# (5 marks)
+
+**What pattern can you see in the data?**
+
+# (5 marks)
+
+**In your .R file use functions `ggplot()` with argument `data=mydf` and `aes()` with arguments `x=sd_bid`, `y=sd_ask`,`col=treatment`,`label=oneid` to create fourth_plot. To this blank plot add (using the `+` operator) `geom_text()` with no arguments.**
+
+```{r fourth_chunk}
+#fourth_plot
+```
+
+# (5 marks)
+
+**What pattern can you see in the data?**
+
+# (5 marks)
+
+**In your .R file create a dataframe called `fourth_hull` which uses dataframe `mydf` as an input, THEN `group_by()` `treatment` THEN `slice(chull(sd_bid,sd_ask))`. Copy your code into the chunk below, noting `eval=FALSE`, which means that the code is not evaluated (run).**
+
+```{r, eval=FALSE, echo=TRUE}
+
+``` 
+
+# (5 marks)
+
+**In your .R file create `fifth_plot`, by adding to `fourth_plot` using the assignment `<-` and addition `+` operators: ie. `fifth_plot<-fourth_plot+`. To the plot add a `geom_polygon()` with arguments `data=fourth_hull`, `fill=treatment`, `col=treatment`, `alpha=.3`.**
+
+```{r fifth_chunk}
+#fifth_plot
+```
+
+# (5 marks)
+
+**What pattern can you see in the data?**
+
+# (5 marks)
+
+**In your .R file use functions `ggplot()` with argument `data=mydf` and `aes()` with arguments `x=round,y=ask_minus_bid` to create a blank plot called `sixth_plot`. Use the addition operator `+` to add `geom_hline()` with arguments `yintercept = 0,lwd=2,col="white"` and `geom_line()` with arguments `aes(group=oneid, col=mean_ask_minus_bid)`. Add the colour palette `scale_colour_viridis_c()` and a `geom_smooth()` with arguments `col="black",lwd=2,se=FALSE`. Finally, create a separate plot for each treatment using `facet_grid()` with arguments `group_size~hints`.**
+
+```{r sixth_chunk, message=FALSE}
+#sixth_plot
+```
+
+# (5 marks)
+
+**What pattern can you see in the data?**
+
+# (10 marks)
+
+**Describe how you decided to what to bid and ask.**
+
+
+
+
+
+
+
+
+
+
