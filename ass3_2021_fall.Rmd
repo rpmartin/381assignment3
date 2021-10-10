@@ -37,16 +37,21 @@ The treatments were designed to manipulate both alternative explanations of the 
 
 * Half of the subjects were provided hints regarding the optimal bidding and asking behaviour: i.e. "Hint: in a second price auction bidding your value maximizes your expected payoff." and "Hint: In a second price procurement auction, asking your forgone value maximizes your expected payoff."  If subjects are confused about how to optimally bid and ask, then hints should reduce this confusion.  
 
-* Half of the subjects were in two person groups and the other half of the class was in 10 person groups.  In a two person group if you have "normal" preferences then you have some incentive to bid and ask your value, whereas in a 10 person group your expected payoff function is basically flat (at zero): the only mistake you can make is to bid too much or ask too little. 
+* Half of the subjects were in two person groups and the other half of the class was in 10 person groups.  In a two person group if you have "normal" preferences then you have some incentive to bid and ask your value, whereas in a 10 person group your expected payoff function is basically flat (at zero): the only mistake you can make is to bid too much or ask too little, resulting in negative payoffs. 
 
 Note that this is a *very* demanding test of the endowment effect: The probability of you becoming endowed (winning the auction) is low and unknown, so very little opportunity to become attached to the chocolate bar.
+
+# (0 marks)
+
+**If you participated in the experiment, tell me which treatment you were in and describe how you decided to what to bid and ask.**
+
 
 # (10 marks)
 
 **In words, why is it in your best interest to bid your true value in a second price sealed bid auction, regardless of the number of bidders?**
 
 
-# (5 marks)
+# (10 marks)
 
 **In words, why is it in your best interest to ask your forgone value in a second price procurement auction, regardless of the number of askers?**
 
@@ -145,15 +150,9 @@ Note that this is a *very* demanding test of the endowment effect: The probabili
 #sixth_plot
 ```
 
-# (5 marks)
-
-**What pattern can you see in the data?**
-
 # (10 marks)
 
-**Describe how you decided to what to bid and ask.**
-
-
+**What pattern can you see in the data?**
 
 
 
