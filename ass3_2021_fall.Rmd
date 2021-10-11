@@ -100,7 +100,7 @@ Note that this is a *very* demanding test of the endowment effect: The probabili
 
 # (5 marks)
 
-**In your .R file create `third_plot`, by adding to `second_plot` using the assignment `<-` and addition `+` operators: ie. `third_plot<-second_plot+`. To the plot add a `geom_polygon()` with arguments `data=second_hull`, `fill=treatment`, `col=treatment`, `alpha=.3`.**
+**In your .R file create `third_plot`, by adding to `second_plot` using the assignment `<-` and addition `+` operators: ie. `third_plot<-second_plot+`. To the plot add a `geom_polygon()` with arguments `data=second_hull`, `alpha=.3` and `mapping=aes()` with arguments `fill=treatment`, `col=treatment`.**
 
 ```{r third_chunk}
 #third_plot
@@ -132,7 +132,8 @@ Note that this is a *very* demanding test of the endowment effect: The probabili
 
 # (5 marks)
 
-**In your .R file create `fifth_plot`, by adding to `fourth_plot` using the assignment `<-` and addition `+` operators: ie. `fifth_plot<-fourth_plot+`. To the plot add a `geom_polygon()` with arguments `data=fourth_hull`, `fill=treatment`, `col=treatment`, `alpha=.3`.**
+**In your .R file create `fifth_plot`, by adding to `fourth_plot` using the assignment `<-` and addition `+` operators: ie. `fifth_plot<-fourth_plot+`.  To the plot add a `geom_polygon()` with arguments `data=second_hull`, `alpha=.3` and `mapping=aes()` with arguments `fill=treatment`, `col=treatment`.** 
+
 
 ```{r fifth_chunk}
 #fifth_plot
