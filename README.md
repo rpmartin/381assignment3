@@ -29,7 +29,7 @@ Open file assignment3.R
 Ensure that your cursor is at the top of the file assignment3.R (the file is open in the top-left box in Rstudio). 
 Run the code by repeatedly hitting both control and enter. 
 By doing so you step through the code line by line, and in the bottom left panel you see the results of each line of code. 
-The last line of code creates your first graph, which should show up in the bottom right panel.
+
 
 There should be no errors (yet ;) when you run the code of assignment3.R. If there are errors, do not proceed further! 
 Get in touch either by email or on the message board. 
